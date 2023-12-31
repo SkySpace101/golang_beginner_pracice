@@ -10,33 +10,58 @@ import (
 func main() {
 	fmt.Println("Hello World")
 
-	// myslice := []int{31, 34, 45, 243, 324, 2343}
-	// myslice1 := []int{234, 45, 2, 67, 34, 34}
+	// conditions
 
-	// myslice2 := append(myslice, myslice1...)
+	/*
+		// var value bool
+		var value string
 
-	mymap := map[int]string{}
+		fmt.Print("Please enter a 'value': ")
+		fmt.Scan(&value)
 
-	mymap[1] = "one"
-	mymap[2] = "two"
-	mymap[3] = "three"
-	mymap[4] = "four"
+		if value == "false" {
+			fmt.Println("false")
+		} else if value == "true" {
+			fmt.Println("true")
+		} else {
+			fmt.Println(value)
+		}
+	*/
 
-	fmt.Println(mymap)
+	// switch
+	// day := 1
+	var day int
 
-	for key, val := range mymap {
-		fmt.Printf("the key is %d and the value is %s.\n", key, val)
+	fmt.Print("please enter a 'day': ")
+	fmt.Scan(&day)
+
+	switch day {
+	case (1):
+		fmt.Println("one")
+	case (2):
+		fmt.Println("two")
+	case (3):
+		fmt.Println("three")
+	case (4):
+		fmt.Println("four")
+	case (5):
+		fmt.Println("five")
+	case (6):
+		fmt.Println("six")
+	case (7):
+		fmt.Println("seven")
+	default:
+		fmt.Println(day)
 	}
 
-	// fmt.Println(myslice)
-	// fmt.Println(myslice2)
+	// while loop functionality
 
-	// for i := 0; i < len(myslice); i++ {
-	// 	fmt.Println(myslice[i])
-	// }
-	// fmt.Println(len(myslice2))
-	// fmt.Println(cap(myslice2))
+	for day != 31 {
+		fmt.Println("wrong") // infinite loop
+	}
 
 }
 
 // In Go any executable code belongs to the main package.
+// At the end of each line there is an implicit semicolon added so
+// if you are working with any statement mind if you are creating new line
