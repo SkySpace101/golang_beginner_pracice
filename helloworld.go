@@ -10,11 +10,25 @@ import (
 func main() {
 	fmt.Println("Hello World")
 
-	fmt.Print("hello")
-	fmt.Print("World")
+	// Four basic types of datatype in Go.
+	// 1. Integer
+	// 2. Float
+	// 3. String
+	// 4. Boolean
 
-	// using formatting verbs in printf
-	fmt.Printf("This is a fund %d and %5.3f and  %s %x  %T,%T,%T %v %v %v %t %e %g", 45, 343.435, "shubham", 34, "sdfsd", 34, 34.56, "sdfsd", 34, 34.56, false, 56.45, 67.1345454)
+	var a int64
+	a = 23
+
+	fmt.Println(a)
+
+	// var b int8 -- produce an error if try to assign 200
+	var b uint8
+	b = 200
+
+	fmt.Println(b)
+
+	var f1 float32
+	var f2 float64
 
 }
 
