@@ -10,7 +10,7 @@ import (
 func main() {
 	fmt.Println("Hello World")
 
-	// ****Memory Efficiency and Copying Slices ****
+	// ****Memory Efficiency and Copying Slices****
 
 	// When using slices, Go loads all the underlying elements into the memory.
 	// If the array is large and you need only a few elements, it is better
