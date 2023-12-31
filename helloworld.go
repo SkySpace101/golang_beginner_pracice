@@ -10,34 +10,72 @@ import (
 func main() {
 	fmt.Println("Hello World")
 
-	// ****Memory Efficiency and Copying Slices****
+	// struct definition
+	type record struct {
+		firstName string
+		lastName  string
+		salary    float64
+		id        string
+		role      string
+	}
 
-	// When using slices, Go loads all the underlying elements into the memory.
-	// If the array is large and you need only a few elements, it is better
-	// to copy those elements using the copy() function.
-	// The copy() function creates a new underlying array with only
-	// the required elements for the slice. This will reduce the memory used for the program.
+	// instantiation of the struct record type variable
+	var r1 record
 
-	// copy(dest, src) - Syntax
+	r1.firstName = "shubham"
+	r1.lastName = "Agarwal"
+	r1.salary = 200000
+	r1.id = "sad23ds"
+	r1.role = "Senior Developer"
 
-	// The copy() function takes in two slices dest and src, and copies data from src to dest.
-	// It returns the number of elements copied.
+	fmt.Println(r1)
+	fmt.Println(r1.salary)
 
-	numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
-	// Original slice
-	fmt.Printf("numbers = %v\n", numbers)
-	fmt.Printf("length = %d\n", len(numbers))
-	fmt.Printf("capacity = %d\n", cap(numbers))
+	// map
 
-	// Create copy with only needed numbers
-	neededNumbers := numbers[:len(numbers)-10]
-	numbersCopy := make([]int, len(neededNumbers))
-	copy(numbersCopy, neededNumbers)
+	mymap := map[int]string{1: "game", 2: "sports", 3: "studies"}
 
-	fmt.Printf("numbersCopy = %v\n", numbersCopy)
-	fmt.Printf("length = %d\n", len(numbersCopy))
-	fmt.Printf("capacity = %d\n", cap(numbersCopy))
+	fmt.Println(mymap)
 
+	for i := 0; i < 3; i++ {
+		fmt.Println(i)
+		// fmt.Println(mymap[i])
+	}
+
+	// getting input from the user
+
+	var a, b int
+	fmt.Println("Please enter a number")
+	fmt.Scan(&a, &b)
+	fmt.Println("thank you")
+
+	fmt.Println("please enter a number")
+	// fmt.Scanln(&b)
+	fmt.Println(b)
+
+	var c int
+	fmt.Println("please enter a number")
+	fmt.Scanf("%v", &c) // used when the input is required in a particular format specified in this Scanf function.
+	fmt.Println("thanks")
+	fmt.Println(c)
+
+	fmt.Println(a)
+
+	print_function()
+	print_function()
+	print_function()
+
+	fmt.Println(add(31, 32))
+
+}
+
+func print_function() {
+	fmt.Println("What is good?")
+}
+
+func add(a int, b int) (result int) {
+	result = a + b
+	return
 }
 
 // In Go any executable code belongs to the main package.
